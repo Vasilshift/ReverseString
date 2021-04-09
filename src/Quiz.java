@@ -1,22 +1,23 @@
+import java.util.Scanner;
+
 import static java.lang.Math.abs;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 public class Quiz {
     public static void main(String[] args) {
-        String s = new String("Madam In Eden, I’m Adam");
 
-        System.out.println(isPalindrome(s));
-    }
-
-    public static boolean isPalindrome(String s) {
-
-        String nowhitespace = new String();
-
-        nowhitespace = s.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
-
-        String reversedString = new StringBuffer(nowhitespace).reverse().toString();
-        boolean result = reversedString.matches(nowhitespace);
-        return result;
+        int[] array = new int[8];
+        int[] arraysort = new int[8];
+        //Scanner sc = new Scanner(System.in);
+        //a = sc.nextInt();
+        for (int i = 0; i <array.length; i++) {
+            array[i] = i;
+            if(i % 2 == 0) {
+                arraysort[i] = i;
+            }
+        }
+        for(int k= 0; k < arraysort.length; k++) {
+            System.out.print(arraysort[k]);
+        }
     }
 
 }
